@@ -1,0 +1,161 @@
+@import 'mixins';
+@import 'temes';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $Open-sans;
+    //background: red;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .contenedor {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 90px auto;
+        grid-template-areas: "header header"
+            "menu contenido";
+        grid-template-rows: 60px auto;
+        transition: all .3s ease;
+        //background: red;
+
+        .header {
+
+            grid-area: header;
+            background: $blanco;
+            //background: red;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            grid-template-areas: "gus-logo busqueda gus-iconos";
+
+            .contenedor-logo {
+                grid-area: gus-logo;
+                display: flex;
+                align-items: center;
+
+                .boton-menu {
+                    border: none;
+                    padding: 10px;
+                    background: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                    border-radius: 100px;
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+
+                    &:hover {
+                        background: $grey-light;
+                        //minuto 31:40
+                    }
+                }
+            }
+
+            .barra-busqueda {
+                grid-area: busqueda;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                input{
+                    min-width: 60%;
+                    padding: 0 15px;
+                    height: 35px;
+                    //line-height: 35px;
+                    border: 1px solid $grey-light;
+                    font-size: 16px;
+                    font-family: $Open-sans;
+                }
+                button{
+                    height: 35px;
+                    border: 1px solid $grey-light;
+                    border-left: none;
+                    color: $grey-dark;
+                    background: #f8f8f8;
+                    padding: 0 25px;
+                    cursor: pointer;
+                }
+            }
+
+            .botones-header {
+                grid-area: gus-iconos;
+                display: flex;
+                align-items: center;
+                button{
+                    background: none;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    padding: 7px 12px;
+                    border-radius: 100%;
+                    color: #828282;
+                    margin-right: 4px;
+                    cursor: pointer;
+                    &:hover{
+                        background: #e7e7e7;
+                    }
+
+                }
+
+                .avatar{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    img{
+                        vertical-align: top;
+                        width: 100%;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            .contenedor-logo{
+                .logo{
+
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 20px;
+
+
+                    .fas{
+                        background: $red-youtube;
+                        padding: 7px 12px;
+                        color: $blanco;
+                        border-radius: 4px;
+                        font-size: 8px;
+                        position: relative;
+                        top: -4px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+
+        }
+
+        .menu-lateral {
+            grid-area: menu;
+            background: $grey-light;
+        }
+
+        .main {
+            grid-area: contenido;
+            background: $grey-dark;
+        }
+
+        .active {
+            grid-template-columns: 300px auto;
+        }
+    }
+}
