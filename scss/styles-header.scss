@@ -1,5 +1,9 @@
 @import 'mixins';
 @import 'temes';
+@import 'media_1200px';
+@import 'media_992px';
+@import 'media_768px';
+@import 'media_576px';
 
 * {
     padding: 0;
@@ -21,7 +25,7 @@ body {
         min-height: 100vh;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 90px auto;
+        grid-template-columns: minmax(75px, 75px) auto;
         grid-template-areas: "header header"
             "menu contenido";
         grid-template-rows: 60px auto;
@@ -58,7 +62,6 @@ body {
 
                     &:hover {
                         background: $grey-light;
-                        //minuto 31:40
                     }
                 }
             }
@@ -68,7 +71,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                input{
+
+                input {
                     min-width: 60%;
                     padding: 0 15px;
                     height: 35px;
@@ -77,7 +81,8 @@ body {
                     font-size: 16px;
                     font-family: $Open-sans;
                 }
-                button{
+
+                button {
                     height: 35px;
                     border: 1px solid $grey-light;
                     border-left: none;
@@ -92,7 +97,8 @@ body {
                 grid-area: gus-iconos;
                 display: flex;
                 align-items: center;
-                button{
+
+                button {
                     background: none;
                     border: none;
                     width: 40px;
@@ -103,18 +109,20 @@ body {
                     color: #828282;
                     margin-right: 4px;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         background: #e7e7e7;
                     }
 
                 }
 
-                .avatar{
+                .avatar {
                     width: 30px;
                     height: 30px;
                     display: inline-block;
                     margin-right: 10px;
-                    img{
+
+                    img {
                         vertical-align: top;
                         width: 100%;
                         border-radius: 100%;
@@ -122,14 +130,14 @@ body {
                 }
             }
 
-            .contenedor-logo{
-                .logo{
+            .contenedor-logo {
+                .logo {
 
                     font-family: 'Bebas Neue', cursive;
                     font-size: 20px;
 
 
-                    .fas{
+                    .fas {
                         background: $red-youtube;
                         padding: 7px 12px;
                         color: $blanco;
@@ -146,16 +154,70 @@ body {
 
         .menu-lateral {
             grid-area: menu;
-            background: $grey-light;
+            background: $blanco;
+            overflow: hidden;
+
+            a {
+                display: block;
+                padding: 15px 35px;
+                color: $black;
+                min-width: 800px;
+
+                &:hover {
+                    background: $gris-links;
+                }
+            }
+
+            .link-activo {
+                background: $gris-links;
+                font-weight: bold;
+
+                .fas {
+                    color: $red-youtube;
+                }
+            }
+
+            .fas {
+                color: #606060;
+                margin-right: 20px;
+                width: 20px;
+                //background: red;
+                text-align: center;
+            }
+
+            hr{
+                margin: 20px 0;
+                border: 1px solid #dfdfdf;
+            }
         }
 
         .main {
             grid-area: contenido;
-            background: $grey-dark;
-        }
+            background: #f9f9f9;
+            display: grid;
+            grid-template-rows: 60px auto;
+            justify-content: center;
+            padding: 40px;
 
-        .active {
-            grid-template-columns: 300px auto;
+            .tiutlo{
+                margin-bottom: 20px;
+            }
+            
+            .grid-videos{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px 40px;
+                img{
+                    width: 100%;
+                }
+                .video{
+                    display: block;
+                }
+            }
         }
+    }
+
+    .active {
+        grid-template-columns: minmax(300px, 18%) auto;
     }
 }

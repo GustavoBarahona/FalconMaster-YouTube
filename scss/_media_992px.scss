@@ -1,0 +1,16 @@
+@media screen and (max-width: 992px) {
+    html {
+        body {
+            .contenedor {
+                
+
+                .main {
+                    .grid-videos {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                }
+            }
+        }
+    }
+}

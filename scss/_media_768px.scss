@@ -1,0 +1,32 @@
+@media screen and (max-width: 768px) {
+    html {
+        body {
+            .contenedor {
+                grid-template-rows: auto;
+
+                .header {
+                    padding: 20px;
+                    grid-template-columns: auto auto;
+                    justify-content: space-between;
+                    grid-template-areas: "gus-logo gus-iconos"
+                        "busqueda busqueda";
+
+                    .contenedor-logo {
+                        .logo {
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    .barra-busqueda {
+                        input {
+                            min-width: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

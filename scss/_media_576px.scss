@@ -1,0 +1,21 @@
+@media screen and (max-width: 576px) {
+    html {
+        body {
+            .contenedor {
+                
+
+                .main {
+                    
+                    .grid-videos {
+                        grid-template-columns: 1fr;
+                    }
+
+                }
+            }
+
+            .active {
+                grid-template-columns: minmax(220px, 18%) auto;
+            }
+        }
+    }
+}

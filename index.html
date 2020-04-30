@@ -12,13 +12,13 @@
 font-family: 'Oswald', sans-serif;; -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-header.css">
 
     <title>Página Principal | YouTube</title>
 </head>
 
 <body>
-    <div class="contenedor active">
+    <div class="contenedor active" id="contenedor">
         <header class="header">
             <div class="contenedor-logo">
                 <button id="boton-menu" class="boton-menu"><i class="fas fa-bars"></i></button>
@@ -36,15 +36,45 @@ font-family: 'Oswald', sans-serif;; -->
             </div>
         </header>
         <nav class="menu-lateral">
-            <p>Menu</p>
+            <a href="#" class="link-activo"> <i class="fas fa-home"></i> Página principal</a>
+            <a href="#"> <i class="fas fa-fire"></i> Tendencias</a>
+            <a href="#"> <i class="fas fa-star"></i> Suscripciones</a>
+            
+            <hr>
+            
+            <a href="#"> <i class="fas fa-folder"></i> HTML y CSS</a>
+            <a href="#"> <i class="fas fa-folder"></i> Responsive design</a>
+            <a href="#"> <i class="fas fa-folder"></i> Boostrap</a>
+            
+            <hr>
+            
+            <a href="#"> <i class="fas fa-folder"></i> Javascript</a>
+            <a href="#"> <i class="fas fa-folder"></i> React</a>
+            <a href="#"> <i class="fas fa-folder"></i> PHP y MySQL</a>
         </nav>
         <main class="main">
-            <p>Contenido Principal</p>
+            <h3 class="titulo">Videos recomendados</h3>
+            <div class="grid-videos">
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+                <a href="#" class="video"><img src="https://via.placeholder.com/500x281?text=Placeholder" alt=""></a>
+            </div>
+
         </main>
     </div>
 
 
     <script src="https://kit.fontawesome.com/abb479592c.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
